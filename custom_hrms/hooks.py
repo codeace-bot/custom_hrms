@@ -5,6 +5,25 @@ app_description = "Codeace Custom HRMS"
 app_email = "iqbal@codeace.com"
 app_license = "mit"
 
+has_permission = {
+    "Leave Approval": "custom_hrms.leave_approval.leave_approval.has_permission"
+}
+
+fixtures = [
+    {
+        "dt": "DocType",
+        "filters": [["module", "=", "Custom HRMS"], ["name", "=", "Leave Approval"]]
+    },
+    {
+        "dt": "Custom Field",
+        "filters": [["module", "=", "Custom Hrms"]]
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [["module", "=", "Custom Hrms"]]
+    }
+]
+
 # Apps
 # ------------------
 
